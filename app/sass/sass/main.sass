@@ -1,0 +1,105 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "index"
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: $accent
+	opacity: 1
+
+*:-moz-placeholder
+	color: $accent
+	opacity: 1
+
+*::-moz-placeholder
+	color: $accent
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: $accent
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: $accent
+body input:required:valid,
+body textarea:required:valid
+	color: $accent
+
+html
+	height: 100%
+	min-height: 100%
+
+body
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $font
+	font-size: 14px
+	font-weight: 100
+	color: #fff
+	overflow-x: hidden
+	background-image: url(../img/bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	height: 100%
+	min-height: 100%
+
+.h1, .h2, .h3, .h4, .h5, .h6
+	line-height: 1.4
+	margin: 0
+
+.h1
+	font-size: 48px
+	font-weight: bold
+
+a
+  color: #fff
+  text-decoration: none
+  &:hover
+    color: #fff
+    text-decoration: none
+  &:focus
+    color: #fff
+    text-decoration: none
+
+.list
+  margin: 0
+  padding: 0
+  font-weight: 800
+  font-size: 14px
+
+.item
+  list-style-type: none
+  float: left
+  margin-right: 40px
+
+.btn
+	color: #fff
+	font-size: 16px
+	border: 1px solid #fff
+	padding: 5px 45px
+	transition: all .3s ease
+	display: inline-block
+	&:hover
+		background: linear-gradient(to bottom, #fff, 90%, rgba(#fff, .8))
+		color: #212121
+	&:focus
+		background: linear-gradient(to bottom, #fff, 90%, rgba(#fff, .8))
+		color: #212121
+
+
+::selection
+	background-color: $accent
+	color: #ccc
+
+@import "media" // Всегда в конце
